@@ -1,3 +1,10 @@
+.news {
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
 .news__item {
     display: flex;
     flex-direction: column;
@@ -49,7 +56,12 @@
     color: #fff;
     padding: 10px;
     width: 100%;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+}
+
+.news__description {
+    display: flex;
+    flex-direction: column;
 }
 
 .news__item .news__description {
@@ -62,11 +74,9 @@
 .news__item .news__description h2 {
     line-height: 1;
     margin: 0;
-    font-size: 1.7rem;
 }
 
 .news__item .news__description h3 {
-    font-size: 1rem;
     font-weight: 300;
     text-transform: uppercase;
     color: #a2a2a2;
@@ -75,14 +85,14 @@
 
 .news__item .news__description .news__read-more {
     text-align: right;
+    margin-top: 15px;
 }
 
 .news__item .news__description .news__read-more a {
-    color: #5ad67d;
+    color: #5ecdf9;
     display: inline-block;
     position: relative;
     text-decoration: none;
-    font-weight: 800;
 }
 
 .news__item .news__description .news__read-more a:after {
@@ -111,7 +121,7 @@
     content: '';
     position: absolute;
     height: 5px;
-    background: #5ad67d;
+    background: #acd4b7;
     width: 35px;
     top: -0.75rem;
     border-radius: 3px;
@@ -121,7 +131,44 @@
     left: 0%;
 }
 
+@media screen and (min-width: 320px) {
+    .news {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .news__item .news__description h2 {
+        font-size: 16px;
+    }
+
+    .news__item .news__description h3 {
+        font-size: 0.8rem;
+    }
+
+    .news__item .news__description .news__read-more a {
+        font-weight: 600;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .news__item .news__description h2 {
+        font-size: 18px;
+    }
+}
+
 @media (min-width: 640px) {
+    .news__item .news__description h2 {
+        font-size: 1.7rem;
+    }
+
+    .news__item .news__description h3 {
+        font-size: 1rem;
+    }
+
+    .news__item .news__description .news__read-more a {
+        font-weight: 800;
+    }
+
     .news__item {
         flex-direction: row;
         max-width: 700px;
@@ -162,5 +209,12 @@
 
     .news__item.alt .news__meta-details {
         padding-left: 25px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .news {
+        padding-left: 0;
+        padding-right: 0;
     }
 }

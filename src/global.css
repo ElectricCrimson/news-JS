@@ -1,35 +1,106 @@
 body {
     color: #fff;
-    background: #17181c;
+    background: #0e252b;
     font-family: sans-serif;
 }
 
 header {
     padding: 10px 30px;
+    text-align: center;
 }
 
 header h1 {
-    font-size: 40px;
-    font-weight: 800;
+    letter-spacing: 0.5px;
 }
 
-footer {
-    height: 100px;
+footer, 
+.footer__info {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+footer {
+    height: 100px;
+    flex-direction: column;
+    color: #759ca6;
+    letter-spacing: 0.6px;
+    padding-top: 30px;
+}
+
+.footer__info {
+    gap: 40px;
+    margin-bottom: 10px;
+}
+
 footer .copyright {
     font-size: 14px;
-    color: #333;
     text-align: center;
 }
-footer .copyright a {
-    color: #444;
+
+footer .copyright a:link,
+footer .copyright a:visited,
+.footer__link:link,
+.footer__link:visited {
+    color: #759ca6;
+    text-decoration: none;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
 }
-footer .copyright a:hover {
-    color: #555;
+
+footer .copyright a:hover,
+footer .copyright a:active,
+.footer__link:hover,
+.footer__link:active {
+    color: #c6e8f0;
+    transform: scale(1.1);
 }
+
+.logo {
+    width: 35px;
+    height: 35px;
+    background-image: url("./assets/icons/rss-logo.svg");
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+.year {
+    font-size: 15px;
+}
+
 footer .copyright:before {
     content: '©';
+    margin-right: 5px;
+}
+
+@media screen and (min-width: 320px) {
+    header h1 {
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .footer__info {
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    header h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    header h1 {
+        font-size: 35px;
+        font-weight: 800;
+    }
+
+    .footer__info {
+        margin-left: 12px;
+    }
 }
