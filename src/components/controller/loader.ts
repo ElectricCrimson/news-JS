@@ -3,8 +3,8 @@ import { Callback } from '../types/types';
 import { ResponseStatus } from '../types/enum';
 
 class Loader {
-    baseLink: string;
-    options: IOptions;
+    private baseLink: string;
+    private options: IOptions;
 
     constructor(baseLink: string, options: IOptions) {
         this.baseLink = baseLink;
